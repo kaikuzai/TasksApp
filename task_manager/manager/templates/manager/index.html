@@ -1,1 +1,9 @@
 Test test 
+<h2> Here are the tasks we currently have </h2>
+<ul>
+    {% for list in all_lists%}
+    <li>
+        <a href="{% url 'manager:Task list' list.id %}">{{ list }}</a>
+    </li>
+    {% endfor %}
+</ul>
